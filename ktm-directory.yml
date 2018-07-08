@@ -42,8 +42,8 @@ spring:
 logging:
     level:
         root: INFO
-    path: /var/log/ktm_directory
-    file: '${logging.path}/ktm_dir.log'
+    path: /var/log/ktm-directory
+    file: '${logging.path}/ktm-directory.log'
     pattern:
         file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
         console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
