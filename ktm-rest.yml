@@ -1,0 +1,98 @@
+App:
+    English:
+        Language: en
+    Everest:
+        TwitterSearchQueryKeyWord: everest min_retweets:3 -filter:retweets AND -filter:replies
+    Kathmandu:
+        TwitterSearchQueryKeyWord: kathmandu min_retweets:3 -filter:retweets AND -filter:replies
+    Nepal:
+        SearchQueryKeyWord: nepal
+        TwitterSearchQueryKeyWord: nepal filter:news min_retweets:3 -filter:retweets AND -filter:replies
+TextUtility:
+    HttpPrefix: http
+    RTWord: RT
+    SpecialCharactersExceptSpaces: '[^a-zA-Z0-9 ]+'
+Twitter:
+    IrrelevantTwitterUsers: nepal_venture
+    RegexSequenceOfWhiteCharacters: \s+
+YouTube:
+    AppName: com-ktm-youtube-search
+    CategoryNewsPolitics: 25
+    IdSnippet: id,snippet
+    MediaTypeVideo: video
+    OrderBy: relevance
+    VideoEmbeddableTrue: true
+    VideoSearchSetFields: items(id/kind,id/videoId,snippet/title,snippet/description,snippet/publishedAt,snippet/thumbnails/default/url,snippet/thumbnails/high/url)
+    VideoTypeModerate: moderate
+    VideoUrlPrefix: https://www.youtube.com/watch?v=
+documentary:
+    nepal:
+        vimeo: 56402277,60393170,163173560,218895207,154148746,58702955,63650334,228927872,33244776,110171074,157031580
+        youtube: xMD6c8IVghk,m-25EKg0vFc,pN102Cdzh2g,wxoF-FoqCMY,shOqxSZBMAg,ce5T2Ow_o54,C0_NCXew6x0,db4T9JYfE20,ZTzhA4ShsHQ,TwFa_psi2LE,PUz3uR7dTJA,uPfQCAnL79I,_Dy8jwq65Zg,fUZw6gLz63g,EN19au1tpsU,LjDkSoAl-kI,MUA01CB_aVE,Pvs2xbs5to4,HlAiU5fIaKY,IrHE35DL2Lo,wVIUz5Z9614,yC8md-gICJk,XVv34yr1lrw,eGoH2EoCmNk,VhZJhon05HE,PLAFsp4V_44,UEurQyKZmdQ,PZ6jDMo8bUM,LTmz16Xf-oU,IUGtQKzS2gg,5Za6CsQvi-E,PqiMDwYmY6s,feFQgyupoMM,6ytdet43ZZY,r-l3LI3kVEs,AY9DMWOFmkg,Vl0SzCNnk9A,vNmFjbF4gwE,U4I7E0-c1wc,cpcMix-CxlI,pV2MyOQsNpQ,iT1D1WVQjMU,uT48XVJPeQ4,dLAakUl_Nhs,F2MgB5R60Mo,m7DIz7CcMXk,kR6z6ytUGNo,ZvDAfdsocJ4,MadSXa4LoVU,3cVGyq-w6lA,Z1LeZ3XF_IE,R-G1yE2vQWQ,A7gLC4l5Nmo,ZWEHgy7NV_4,DgbU4UWTGfk,dW5kRBq30m4
+rss:
+    international:
+        india:
+            tribune-india-1: http://www.tribuneindia.com/rss/feed.aspx?cat_id=7
+            tribune-india-2: http://www.tribuneindia.com/rss/feed.aspx?cat_id=1
+    national:
+        nepal:
+            himalayan-times-1: https://thehimalayantimes.com/feed/
+            himalayan-times-2: https://thehimalayantimes.com/category/art-culture/feed/
+            himalayan-times-3: https://thehimalayantimes.com/category/opinion/feed/    
+endpoints:
+    health:
+        sensitive: false
+    metrics:
+        sensitive: false
+info:
+    app:
+        description: This is my the spring boot application
+        name: ktm rss
+        version: 1.0.0
+management:
+    address: '127.0.0.1 '
+    context-path: /manage
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+    port: 8081.0
+    security:
+        enabled: false
+spring:
+    datasource:
+        driver-class-name: org.h2.Driver
+        password: ''
+        url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        username: sa
+    h2:
+        console:
+            enabled: true
+            path: /h2
+            settings:
+                trace: false
+                web-allow-others: false
+    jpa:
+        hibernate:
+            ddl-auto: create
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.H2Dialect
+                format_sql: false
+                show_sql: false
+                use_sql_comments: false
+    security:
+        basic:
+            enabled: false
+        user:
+            name: pradip
+            password: pradip
+logging:
+    level:
+        root: INFO
+    path: /var/log/ktm_java
+    file: '${logging.path}/ktm_rest.log'
+    pattern:
+        file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+        console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+                    

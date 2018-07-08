@@ -1,0 +1,49 @@
+endpoints:
+    health:
+        sensitive: false
+    metrics:
+        sensitive: false
+info:
+    app:
+        description: 'This is my the spring boot application'
+        name: 'ktm rss'
+        version: 1.0.0
+management:
+    address: '127.0.0.1 '
+    context-path: /manage
+    endpoints:
+        web:
+            exposure: {include: '*'}
+    port: 8081
+    security:
+        enabled: false
+spring:
+    datasource:
+        driver-class-name: org.h2.Driver
+        password: ""
+        url: 'jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE'
+        username: sa
+    h2:
+        console:
+            enabled: true
+            path: /h2
+            settings: {trace: false, web-allow-others: false}
+    jpa:
+        hibernate:
+            ddl-auto: create
+        properties:
+            hibernate: {dialect: org.hibernate.dialect.H2Dialect, format_sql: false, show_sql: false, use_sql_comments: false}
+    security:
+        basic:
+            enabled: false
+        user:
+            name: pradip
+            password: pradip
+logging:
+    level:
+        root: INFO
+    path: /var/log/ktm_directory
+    file: '${logging.path}/ktm_dir.log'
+    pattern:
+        file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+        console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'

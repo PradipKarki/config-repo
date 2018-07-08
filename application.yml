@@ -1,0 +1,46 @@
+SwaggerConfig:
+    Description: KTM Times REST API
+    Email: support@ktmtimes.com
+    License: KTM Times API License
+    LicenseUrl: www.ktmtimes.com
+    Name: KTM Times REST API
+    TermsofServiceUrl: www.ktmtimes.com
+    Title: KTM Times
+    Url: www.ktmtimes.com
+    Version: Rest API for Javascript Clients as well as Mobile Clients
+springfox:
+    documentation:
+        swagger:
+            v2:
+                path: /swagger.json
+simplejavamail:
+    defaults:
+        from:
+            address: support@ktmtimes.com
+            name: Support - KTMTimes
+        poolsize: 10
+        sessiontimeoutmillis: 60000
+        subject: KTMTimes News
+    javaxmail:
+        debug: true
+    opportunistic:
+        tls: true
+    smtp:
+        host: smtpout.secureserver.net
+        password: ^%K@TMt$<im.es178**@
+        port: 465
+        username: support@ktmtimes.com
+    transport:
+        mode:
+            logging:
+                only: true
+    transportstrategy: SMTPS
+twitter4j:
+    debug: true
+    oauth:
+        accessToken: 133767585-O1weTb0hGyEFWseAQSnZTUfo3uWldfGWpl1kJEWX
+        accessTokenSecret: c1ZnVkM1E456SzRSHvMlPMs3ClFPb8IPqJiphg4h6T57f
+        consumerKey: WXLLgbDhFn9oZgFGXQLAjbta1
+        consumerSecret: ipwDvC7ZS17pYWjHce4pPsFqScF5ftg0JGtXVkrA4G90ASnKR0
+youtube:
+    apikey: AIzaSyDfi0-iqfOe0lgG_ni-jpNAzDN9ZngyGYE    
