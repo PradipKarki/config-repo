@@ -1,11 +1,9 @@
-# config-repo
+# config-files for KTM Times
 
 HTTP resource-based API for external configuration (name-value pairs or equivalent YAML content)
 
-application.yml supercedes all configuration files
-
-Uses different profile like dev, test for each environemnt configuration:
-
-ktm-rest.yml</br>
-ktm-rest-dev.yml</br>
-ktm-rest-test.yml</br>
+different yml files depending on the environment:
+application.yml (base file)
+ktm-rest.yml (base file)
+ktm-rest-dev.yml (for localhost)
+ktm-rest.yml (for unit and integration testing)
