@@ -13,9 +13,4 @@ spring:
                 dialect: org.hibernate.dialect.MySQL5InnoDBDialect
                 format_sql: true
                 show_sql: true
-<<<<<<< HEAD
                 use_sql_comments: true
-                
-=======
-                use_sql_comments: true
->>>>>>> encrypt decrypt test
