@@ -14,3 +14,20 @@ spring:
                 format_sql: true
                 show_sql: true
                 use_sql_comments: true
+endpoints:
+    health:
+        sensitive: false
+        db:
+            enabled: true
+    metrics:
+        sensitive: false
+management:
+    address: '127.0.0.1 '
+    context-path: /manage
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+    port: 8081.0
+    security:
+        enabled: false                
