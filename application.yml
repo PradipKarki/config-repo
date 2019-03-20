@@ -5,7 +5,7 @@ SwaggerConfig:
     LicenseUrl: www.ktmtimes.com
     Name: KTM Times REST API
     TermsofServiceUrl: www.ktmtimes.com
-    Title: '{cipher}FKSAJDFGYOS8F7GLHAKERGFHLSAJ'
+    Title: ktm-app
     Url: www.ktmtimes.com
     Version: Rest API for Javascript Clients as well as Mobile Clients
 springfox:
