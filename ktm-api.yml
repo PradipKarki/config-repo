@@ -56,14 +56,10 @@ App:
 Twitter:
   Language: en
   Query:
-    Nepal:
-      KeyWord: nepal filter:news min_retweets:3 -filter:retweets AND -filter:replies
-    Everest:
-      KeyWord: everest min_retweets:3 -filter:retweets AND -filter:replies
-    Kathmandu:
-      KeyWord: kathmandu min_retweets:3 -filter:retweets AND -filter:replies
-    Custom:
-      KeyWord: nepal filter:news min_retweets:3 -filter:retweets AND -filter:replies
+    Nepal: nepal filter:news min_retweets:3 -filter:retweets AND -filter:replies
+    Everest: everest min_retweets:3 -filter:retweets AND -filter:replies
+    Kathmandu: kathmandu min_retweets:3 -filter:retweets AND -filter:replies
+    Custom: nepal filter:news min_retweets:3 -filter:retweets AND -filter:replies
   IrrelevantTwitterUsers: nepal_venture
 YouTube:
   AppName: com-ktm-youtube-search
