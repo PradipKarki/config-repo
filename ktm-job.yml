@@ -1,0 +1,39 @@
+endpoints:
+  health:
+    sensitive: false
+    db:
+      enabled: true
+  metrics:
+    sensitive: false
+info:
+  app:
+    description: KTM Job Project
+    name: ktm job
+    version: 1.0.0
+management:
+  address: '127.0.0.1 '
+  context-path: /manage
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  port: 8081.0
+  security:
+    enabled: false
+spring:
+  security:
+    basic:
+      enabled: false
+    user:
+      name: pradip
+      password: pradip
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+  path: /var/log/ktm-job
+  file: '${logging.path}/ktm-job.log'
+  pattern:
+    file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+                    

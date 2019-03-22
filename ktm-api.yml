@@ -1,0 +1,91 @@
+SwaggerConfig:
+  Description: KTM Times REST API
+  Email: support@ktmtimes.com
+  License: KTM Times API License
+  LicenseUrl: www.ktmtimes.com
+  Name: KTM Times REST API
+  TermsofServiceUrl: www.ktmtimes.com
+  Title: KTM App
+  Url: www.ktmtimes.com
+  Version: Rest API for Javascript Clients as well as Mobile Clients
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /swagger.json
+endpoints:
+  health:
+    sensitive: false
+    db:
+      enabled: true
+  metrics:
+    sensitive: false
+info:
+  app:
+    description: KTM Times App
+    name: ktm times
+    version: 1.0.0
+management:
+  address: '127.0.0.1 '
+  context-path: /manage
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  port: 8081.0
+  security:
+    enabled: false
+spring:
+  security:
+    basic:
+      enabled: false
+    user:
+      name: pradip
+      password: pradip
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+  path: /var/log/ktm-api
+  file: '${logging.path}/ktm-api.log'
+  pattern:
+    file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+Twitter:
+  Language: en
+  Query:
+    Nepal:
+      KeyWord: nepal filter:news min_retweets:3 -filter:retweets AND -filter:replies
+    Everest:
+      KeyWord: everest min_retweets:3 -filter:retweets AND -filter:replies
+    Kathmandu:
+      KeyWord: kathmandu min_retweets:3 -filter:retweets AND -filter:replies
+    Custom:
+      KeyWord: nepal filter:news min_retweets:3 -filter:retweets AND -filter:replies
+  IrrelevantTwitterUsers: nepal_venture
+YouTube:
+  AppName: com-ktm-youtube-search
+  QueryTerm: Nepal
+  IdSnippet: id,snippet
+  CategoryNewsPolitics: 25
+  MediaTypeVideo: video
+  OrderBy: relevance
+  VideoEmbeddableTrue: true
+  VideoSearchSetFields: items(id/kind,id/videoId,snippet/title,snippet/description,snippet/publishedAt,snippet/thumbnails/default/url,snippet/thumbnails/high/url)
+  VideoTypeModerate: moderate
+  Language: en
+  VideoUrlPrefix: https://www.youtube.com/watch?v=
+documentary:
+  nepal:
+    vimeo: 56402277,60393170,163173560,218895207,154148746,58702955,63650334,228927872,33244776,110171074,157031580
+    youtube: xMD6c8IVghk,m-25EKg0vFc,pN102Cdzh2g,wxoF-FoqCMY,shOqxSZBMAg,ce5T2Ow_o54,C0_NCXew6x0,db4T9JYfE20,ZTzhA4ShsHQ,TwFa_psi2LE,PUz3uR7dTJA,uPfQCAnL79I,_Dy8jwq65Zg,fUZw6gLz63g,EN19au1tpsU,LjDkSoAl-kI,MUA01CB_aVE,Pvs2xbs5to4,HlAiU5fIaKY,IrHE35DL2Lo,wVIUz5Z9614,yC8md-gICJk,XVv34yr1lrw,eGoH2EoCmNk,VhZJhon05HE,PLAFsp4V_44,UEurQyKZmdQ,PZ6jDMo8bUM,LTmz16Xf-oU,IUGtQKzS2gg,5Za6CsQvi-E,PqiMDwYmY6s,feFQgyupoMM,6ytdet43ZZY,r-l3LI3kVEs,AY9DMWOFmkg,Vl0SzCNnk9A,vNmFjbF4gwE,U4I7E0-c1wc,cpcMix-CxlI,pV2MyOQsNpQ,iT1D1WVQjMU,uT48XVJPeQ4,dLAakUl_Nhs,F2MgB5R60Mo,m7DIz7CcMXk,kR6z6ytUGNo,ZvDAfdsocJ4,MadSXa4LoVU,3cVGyq-w6lA,Z1LeZ3XF_IE,R-G1yE2vQWQ,A7gLC4l5Nmo,ZWEHgy7NV_4,DgbU4UWTGfk,dW5kRBq30m4
+rss:
+  international:
+    india:
+      tribune-india-1: http://www.tribuneindia.com/rss/feed.aspx?cat_id=7
+      tribune-india-2: http://www.tribuneindia.com/rss/feed.aspx?cat_id=1
+  national:
+    nepal:
+      himalayan-times-1: https://thehimalayantimes.com/feed/
+      himalayan-times-2: https://thehimalayantimes.com/category/art-culture/feed/
+      himalayan-times-3: https://thehimalayantimes.com/category/opinion/feed/
